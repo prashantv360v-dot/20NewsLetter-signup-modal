@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Email Signup Popup</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="container">
+    <h1>Welcome to Our Website!</h1>
+    <p>Subscribe to our newsletter to receive the latest updates.</p>
+    <button id="openModal" class="main-btn">Subscribe Now</button>
+  </main>
+
+  <!-- Popup Modal -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" role="dialog"
+         aria-modal="true" aria-labelledby="modalTitle">
+
+      <button class="close-btn" id="closeModal"
+              aria-label="Close popup">&times;</button>
+
+      <div class="modal-icon">✉</div>
+      <h2 id="modalTitle">Join Our Newsletter!</h2>
+      <p>Get the latest news, updates, and special offers
+         directly in your inbox.</p>
+
+      <form id="signupForm" novalidate>
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your email address"
+          aria-label="Email address"
+          required
+        />
+
+        <small id="errorMessage" class="error"></small>
+        <button type="submit" class="submit-btn">
+          Sign Up
+        </button>
+      </form>
+
+      <p id="successMessage" class="success"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
